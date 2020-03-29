@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { carouselImgs } from '../consts';
+import { carouselImgs } from '../../consts';
 import styled from 'styled-components';
 import Flickity from 'react-flickity-component';
 import './flickity.scss';

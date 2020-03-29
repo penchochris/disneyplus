@@ -13,7 +13,8 @@
 
 .flickity-slider div {
   opacity: 0.6;
-  margin: 0 8px;
+  margin: 0 5px;
+  left: 10%;
 	&.is-selected {
     opacity: 1;
     .flickerty-title {
