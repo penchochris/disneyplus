@@ -4,6 +4,10 @@ import styled from 'styled-components';
 import Flickity from 'react-flickity-component';
 import './flickity.scss';
 
+const Container = styled.div`
+  overflow: hidden;
+`;
+
 const Title = styled.img`
   z-index: 10;
   left: 0%;
@@ -34,16 +38,18 @@ const flickityOptions = {
 export default class Carousel extends Component {
   render() {
     return (
-      <Flickity
-        options={flickityOptions}
-      >
-        { carouselImgs.map((img, i) =>
-          <SliderElement key={`element-${i}`}>
-            <Background className='flickerty-background' src={img.img} alt=''/>
-            <Title className='flickerty-title' src={img.title} alt=''/>
-          </SliderElement>
-        )}
-      </Flickity>
+      <Container className='carousel-container'>
+        <Flickity
+          options={flickityOptions}
+        >
+          { carouselImgs.map((img, i) =>
+            <SliderElement key={`element-${i}`}>
+              <Background className='flickerty-background' src={img.img} alt=''/>
+              <Title className='flickerty-title' src={img.title} alt=''/>
+            </SliderElement>
+          )}
+        </Flickity>
+      </Container>
     )
   }
 }

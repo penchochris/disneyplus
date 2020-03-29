@@ -1,0 +1,67 @@
+.slide-container {
+  .flickity-enabled {
+    position: relative;
+  }
+  
+  .flickity-enabled:focus { 
+    outline: none; 
+  }
+  
+  .flickity-button {
+    position: absolute;
+    background: none;
+    border: none;
+    color: white;
+    opacity: 0;
+  }
+  
+  .flickity-button:hover {
+    opacity: 1;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .flickity-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px #19F;
+  }
+  
+  .flickity-button:active {
+    opacity: 0.6;
+  }
+  
+  .flickity-button:disabled {
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none;
+  }
+  
+  /* Prev and Next buttons: */
+  
+  .flickity-button-icon {
+    fill: currentColor;
+    position: relative;
+  }
+  
+  .flickity-prev-next-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    height: 100%;
+    width: 5%;
+    right: 10%;
+    position: absolute;
+    
+    .flickity-button-icon {
+      width: 70%;
+    }
+    
+    &.previous { 
+      left: 0;
+    }
+    &.next { 
+      right: 0;
+    }
+  }
+}
