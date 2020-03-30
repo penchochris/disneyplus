@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { svgs, svgsUrl } from '../../consts';
+import throttle from 'lodash/throttle';
+
+export const keyFrameExampleOne = keyframes`
+  0% {
+    color: rgb(249, 249, 249);
+  }
+  100% {
+    background: black;
+  }
+`
+
+export const keyFrameExampleTwo = keyframes`
+  0% {
+    background: black;
+  }
+  100% {
+    color: rgb(249, 249, 249);
+  }
+`
 
 const Container = styled.div`
   position: sticky;
@@ -13,8 +32,12 @@ const Container = styled.div`
   display: flex;
   align-content: center;
   color: rgb(249, 249, 249);
-  background: black;
+  animation: ${keyFrameExampleTwo} 1s;
   background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.03) 15%, rgba(0, 0, 0, 0.125) 30%, rgba(0, 0, 0, 0.25) 46%, rgba(0, 0, 0, 0.4) 61%, rgba(0, 0, 0, 0.553) 75%, rgba(0, 0, 0, 0.694) 88%, rgba(0, 0, 0, 0.8));
+  &:not([data-scroll='0']) {
+    background: black;
+    animation: ${keyFrameExampleOne} 1s;
+  }
 `;
 
 const SvgContainers = styled.div`
@@ -61,9 +84,25 @@ const UserImg = styled.img`
 
 export default class Menu extends Component {
 
+  state = {
+    scroll: 0,
+  };
+
+  componentDidMount() {
+    document.addEventListener('scroll', throttle(this.storeScroll, 500), { passive: true });
+  }
+
+  storeScroll = () => {
+    this.setState({
+      scroll: window.scrollY,
+    });
+
+    console.log(window.scrollY)
+  }
+
   render() {
     return (
-      <Container>
+      <Container data-scroll={this.state.scroll}>
         <LogoBig src={svgsUrl.logoBig} alt=''/>
         <SvgContainers>
           { svgs.map(svg => (
