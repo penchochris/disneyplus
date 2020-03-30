@@ -55,7 +55,7 @@ export default class Slide extends Component {
         <Flickity options={flickityOptions}>
           <PaddingDiv/>
           { this.props.slide.imgs.map((img, i) =>
-            <SlideElement className='flickerty-background' src={img} alt=''/>
+            <SlideElement key={`slide-element-${i}`} className='flickerty-background' src={img} alt=''/>
           )}
           <PaddingDiv/>
         </Flickity>

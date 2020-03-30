@@ -3,21 +3,21 @@ import styled, { keyframes } from 'styled-components';
 import { svgs, svgsUrl } from '../../consts';
 import throttle from 'lodash/throttle';
 
-export const keyFrameExampleOne = keyframes`
+export const fadeInAnimation = keyframes`
   0% {
-    color: rgb(249, 249, 249);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.03) 15%, rgba(0, 0, 0, 0.125) 30%, rgba(0, 0, 0, 0.25) 46%, rgba(0, 0, 0, 0.4) 61%, rgba(0, 0, 0, 0.553) 75%, rgba(0, 0, 0, 0.694) 88%, rgba(0, 0, 0, 0.8));
   }
   100% {
     background: black;
   }
 `
 
-export const keyFrameExampleTwo = keyframes`
+export const fadeOutAnimation = keyframes`
   0% {
     background: black;
   }
   100% {
-    color: rgb(249, 249, 249);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.03) 15%, rgba(0, 0, 0, 0.125) 30%, rgba(0, 0, 0, 0.25) 46%, rgba(0, 0, 0, 0.4) 61%, rgba(0, 0, 0, 0.553) 75%, rgba(0, 0, 0, 0.694) 88%, rgba(0, 0, 0, 0.8));
   }
 `
 
@@ -32,11 +32,14 @@ const Container = styled.div`
   display: flex;
   align-content: center;
   color: rgb(249, 249, 249);
-  animation: ${keyFrameExampleTwo} 1s;
   background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.03) 15%, rgba(0, 0, 0, 0.125) 30%, rgba(0, 0, 0, 0.25) 46%, rgba(0, 0, 0, 0.4) 61%, rgba(0, 0, 0, 0.553) 75%, rgba(0, 0, 0, 0.694) 88%, rgba(0, 0, 0, 0.8));
-  &:not([data-scroll='0']) {
+  &.fade-out {
+    animation: ${fadeOutAnimation} 1s;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.03) 15%, rgba(0, 0, 0, 0.125) 30%, rgba(0, 0, 0, 0.25) 46%, rgba(0, 0, 0, 0.4) 61%, rgba(0, 0, 0, 0.553) 75%, rgba(0, 0, 0, 0.694) 88%, rgba(0, 0, 0, 0.8));
+  }
+  &.fade-in {
     background: black;
-    animation: ${keyFrameExampleOne} 1s;
+    animation: ${fadeInAnimation} 0.5s;
   }
 `;
 
@@ -94,19 +97,17 @@ export default class Menu extends Component {
 
   storeScroll = () => {
     this.setState({
-      scroll: window.scrollY,
+      classFade: window.scrollY ? 'fade-in' : 'fade-out',
     });
-
-    console.log(window.scrollY)
   }
 
   render() {
     return (
-      <Container data-scroll={this.state.scroll}>
+      <Container className={this.state.classFade}>
         <LogoBig src={svgsUrl.logoBig} alt=''/>
         <SvgContainers>
-          { svgs.map(svg => (
-            <SvgContainer>
+          { svgs.map((svg, i) => (
+            <SvgContainer key={`svg-container-${i}`}>
               <svg alt="" viewBox='0 0 36 36'>
                 <path d={svg.path}></path>
               </svg>
