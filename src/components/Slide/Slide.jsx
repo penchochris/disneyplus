@@ -15,7 +15,6 @@ const Container = styled.div`
 `;
   
 const Title = styled.h4`
-  font-family: sans-serif;
   margin: 10px;
   font-size: 1.5rem;
   padding-top: 20px;
