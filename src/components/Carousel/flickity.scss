@@ -13,8 +13,6 @@
 .carousel-container {
   .flickity-slider div {
     opacity: 0.6;
-    margin: 0 5px;
-    left: 10%;
     &.is-selected {
       opacity: 1;
       .flickerty-title {
@@ -30,62 +28,33 @@
   .flickity-enabled:focus { 
     outline: none; 
   }
-
   
-  .flickity-slider {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  
-  /* ---- flickity-button ---- */
+  /* ---- next and prev ---- */
   
   .flickity-button {
     position: absolute;
     background: none;
     border: none;
     color: white;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+    }
   }
-  
-  .flickity-button:hover {
-    background: none;
-    cursor: pointer;
-  }
-  
-  .flickity-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 5px #19F;
-  }
-  
-  .flickity-button:active {
-    opacity: 0.6;
-  }
-  
-  .flickity-button:disabled {
-    opacity: 0.3;
-    cursor: auto;
-    pointer-events: none;
-  }
-  
-  /* Prev and Next buttons: */
   
   .flickity-button-icon {
     fill: currentColor;
     position: relative;
+    width: 65%
   }
   
   .flickity-prev-next-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     top: 0;
     height: 100%;
     width: 5%;
     position: absolute;
-    
-    .flickity-button-icon {
-      width: 70%;
-    }
   
     &.previous { 
       left: 0;
@@ -95,18 +64,17 @@
     }
   }
   
-  
-  /* ---- page dots ---- */
+  /* ---- bullets ---- */
   
   .flickity-page-dots {
     position: absolute;
     width: 100%;
-    bottom: 15px;
+    bottom: 14%;
+    right: 7%;
     padding: 0;
     margin: 0;
     list-style: none;
     text-align: right;
-    right: 10%;
     line-height: 1;
   }
   

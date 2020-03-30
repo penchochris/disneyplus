@@ -9,21 +9,28 @@ const Container = styled.div`
 `;
 
 const Title = styled.img`
-  z-index: 10;
-  left: 0%;
-  max-height: 100%;
-  max-width: 100%;
   position: absolute;
+  z-index: 10;
+  left: 0;
+  max-width: 100%;
 `;
 
 const Background = styled.img`
-  max-width: 100%;
-  border-radius: 10px;
+  width: 100%;
+  visibility: hidden;
 `;
 
 const SliderElement = styled.div`
   position: relative;
-  width: 90%;
+  overflow: hidden;
+  width: 89%;
+  border-radius: 10px;
+  background: url(${props => props.src});
+  background-size: cover;
+  margin: 3% 0.9%;
+  &:hover {
+    border: 4px solid rgb(249, 249, 249);
+  }
 `;
 
 const flickityOptions = { 
@@ -43,8 +50,8 @@ export default class Carousel extends Component {
           options={flickityOptions}
         >
           { carouselImgs.map((img, i) =>
-            <SliderElement key={`element-${i}`}>
-              <Background className='flickerty-background' src={img.img} alt=''/>
+            <SliderElement src={img.background} key={`element-${i}`}>
+              <Background className='flickerty-background' src={img.background} alt=''/>
               <Title className='flickerty-title' src={img.title} alt=''/>
             </SliderElement>
           )}
