@@ -18,6 +18,7 @@ const Title = styled.img`
 const Background = styled.img`
   width: 100%;
   float: left;
+  border-radius: 10px;
 `;
 
 const SliderElement = styled.div`

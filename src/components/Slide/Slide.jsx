@@ -5,9 +5,8 @@ import Flickity from 'react-flickity-component';
 
 import './flickity.scss';
 
-const CustomFlickity = styled(Flickity)`
-  padding-left: 5.5%;
-  padding-right: 5.5%;
+const PaddingDiv = styled.div`
+  width: 5%;
 `;
 
 const Container = styled.div`
@@ -27,7 +26,7 @@ const SlideElement = styled.img`
   display: flex;
   justify-content: center;
   height: 10.1vw;
-  width: 17.7%;
+  width: 16.6%;
   margin: 0.73%;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
@@ -44,6 +43,7 @@ const flickityOptions = {
   pageDots: false,
   freeScroll: true,
   contain: true,
+  indexPosition: 1,
 }
 
 export default class Slide extends Component {
@@ -51,11 +51,13 @@ export default class Slide extends Component {
     return (
       <Container className='slide-container'>
         <Title>{this.props.slide.title}</Title>
-        <CustomFlickity options={flickityOptions}>
+        <Flickity options={flickityOptions}>
+          <PaddingDiv/>
           { this.props.slide.imgs.map((img, i) =>
             <SlideElement key={`slide-element-${i}`} src={img} alt=''/>
           )}
-        </CustomFlickity>
+          <PaddingDiv/>
+        </Flickity>
       </Container>
     )
   }
