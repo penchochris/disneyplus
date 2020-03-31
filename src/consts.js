@@ -147,6 +147,36 @@ export const slides = [
       "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/B9FEB366CF08AC98C49DEB2C06F120AA73E0595927CEEF4C6B8C31F1A4D18478/scale?width=800&aspectRatio=1.78&format=jpeg"
     ]
   },
+  {
+    title: 'Originales',
+    imgs: [
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/872D9401D96890D46EBAF12BD380C74025BABA248D276079FDCCB21D62AE54C1/badging?width=800&aspectRatio=1.78&format=jpeg&label=originals",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/891485B62730798703642E38130934A3C95FF5D8A41CE738B77C37647C02FD85/badging?width=800&aspectRatio=1.78&format=jpeg&label=originals",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/14A377DF13349E928A8AFD1A2F6CEF16DFAF5625385CA4C37729C227646C3137/scale?width=800&aspectRatio=1.78&format=jpeg",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6B0F8B6B7C2B7A8E8F0D746992053A91EBDE5C3431EBB892E7480D997218E274/badging?width=800&aspectRatio=1.78&format=jpeg&label=originals",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/55E060A08ED5F61AC7E12B263E9A0A64D390565028ED70402260D4C74F4BEC29/badging?width=800&aspectRatio=1.78&format=jpeg&label=originals",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/F2CC0D75A1395EC0B830256AD7751CE0B416160F489913DA9C98AD1B8E7434C1/badging?width=800&aspectRatio=1.78&format=jpeg&label=originals",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/49A2573B5CDE28083A9CE544E6A34FE48F1570664BE6ADE52F0B5F1E6E584703/badging?width=800&aspectRatio=1.78&format=jpeg&label=originals",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/504585C68814DEDB52972D67EFCCFA9444873F81A4C65E7E33FAC6AF15093BC8/badging?width=800&aspectRatio=1.78&format=jpeg&label=originals",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/E666E9B6FA7C877B1AC45DFC39CDBD46A9BBA92DC576830AF484856D7DDF31AB/badging?width=800&aspectRatio=1.78&format=jpeg&label=originals",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/E7E5695F2ACED4FE44D81C1D23679B2900A2C1EEA00685BB0A4CE5C8E7E302BC/badging?width=800&aspectRatio=1.78&format=jpeg&label=originals"
+    ],
+  },
+  {
+    title: 'Porque has visto Bolt',
+    imgs: [
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/899AD51ACECC9EFC4E82B8520DD28636181CCF80A5949B4D8727484DEA732FB9/scale?width=800&aspectRatio=1.78&format=jpeg",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/691455C320182C0337F95A55D09549AE7B2BBCE1585102D80DAFA113B625DB5F/scale?width=800&aspectRatio=1.78&format=jpeg",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/285964DE3E6D9B904707F857BC91F0DD24EA43107E1D7469F6FEB5D1046C1DC6/scale?width=800&aspectRatio=1.78&format=jpeg",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/A6CC99F8E09257BD09D14715ED2AF057DDC2F15F1C228BF3F074BAECD449D6EF/scale?width=800&aspectRatio=1.78&format=jpeg",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/D521AACC40DD13D35D6E419F009997F8B42435840CD3AD6C2863D25CCF6F5233/scale?width=800&aspectRatio=1.78&format=jpeg",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/0D036843F77B567EA701A119D6FA8824CD3EED654F362FCF5E6448EBB89C2496/scale?width=800&aspectRatio=1.78&format=jpeg",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/175EE4F8FBD3E00EDF0F6A40433D815D1E2791BE9284C133F138432B8EB3FFD3/scale?width=800&aspectRatio=1.78&format=jpeg",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/E463F3F4ECA2C966F8E0D91766821E55EB39F1285C357700D72B84B445C1F99F/scale?width=800&aspectRatio=1.78&format=jpeg",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/0AC96FEF9C49522F66C07809BB39EB86692C872AC6459312471E62D3D1A638E8/scale?width=800&aspectRatio=1.78&format=jpeg",
+      "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/EE5D196BD70997F7DEB80716769325044CC6BE0DCE88B84F72127E3271589D47/scale?width=800&aspectRatio=1.78&format=jpeg"
+    ]
+  },
 ]
 
 export const svgs = [

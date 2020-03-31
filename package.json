@@ -12,6 +12,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-flickity-component": "^3.5.0",
+    "react-lazy-load-image-component": "^1.4.1",
+    "react-lazyload": "^2.6.6",
     "react-scripts": "3.4.1",
     "styled-components": "^5.0.1"
   },
