@@ -14,7 +14,7 @@
     "react-dom": "^16.13.1",
     "react-flickity-component": "^3.5.0",
     "react-intersection-observer": "^8.26.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "styled-components": "^5.0.1"
   },
   "scripts": {
